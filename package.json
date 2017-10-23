@@ -15,12 +15,12 @@
     "title": "UI-Kit Preview",
     "width": 800,
     "height": 600,
-    "messages": [],
-    "profiles": {
-      "local": {
-        "scrollTop": 0,
-        "select": "button"
-      }
+    "messages": []
+  },
+  "profiles": {
+    "local": {
+      "scrollTop": 0,
+      "select": "button"
     }
   }
 }
