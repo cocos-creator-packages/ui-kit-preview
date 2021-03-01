@@ -87,7 +87,7 @@
 
   <ui-prop class="flex-1" name="Foldable Prop" foldable>
     <ui-input class="flex-1" placeholder="Name"></ui-input>
-    <div class="child">
+    <div slot="child">
       <ui-prop class="flex-1" name="Basic" indent="1">
         <ui-num-input class="flex-1" value="20"></ui-num-input>
       </ui-prop>
@@ -105,7 +105,7 @@
       </ui-prop>
 
       <ui-prop class="flex-1" name="Nested" indent="1" foldable>
-        <div class="child">
+        <div slot="child">
           <ui-prop class="flex-1" name="Prop 01" indent="2">
             <ui-checkbox class="flex-1"></ui-checkbox>
           </ui-prop>
@@ -120,7 +120,7 @@
 
       <ui-prop class="flex-1" name="Disabled" indent="1" foldable disabled>
         <ui-num-input class="flex-1" value="20"></ui-num-input>
-        <div class="child">
+        <div slot="child">
           <ui-prop class="flex-1" name="Prop 01" indent="2">
             <ui-slider class="flex-1"></ui-slider>
           </ui-prop>
@@ -129,7 +129,7 @@
 
       <ui-prop class="flex-1" name="Readonly" indent="1" foldable readonly>
         <ui-num-input class="flex-1" value="20"></ui-num-input>
-        <div class="child">
+        <div slot="child">
           <ui-prop class="flex-1" name="Prop 01" indent="2">
             <ui-checkbox class="flex-1"></ui-checkbox>
           </ui-prop>
@@ -153,7 +153,7 @@
 
   <ui-prop class="flex-1" name="Movable Array" foldable>
     <ui-num-input class="flex-1" value="3" precision="0" step="1"></ui-num-input>
-    <div class="child">
+    <div slot="child">
       <ui-prop class="flex-1" name="[0]" indent="1" movable>
         <ui-checkbox class="flex-1"></ui-checkbox>
       </ui-prop>

@@ -1,11 +1,11 @@
 <div class="section">
   <h3>Standard</h3>
   <ui-section>
-    <div class="header">Normal</div>
+    <div slot="header">Normal</div>
     <ui-prop name="Name" type="string" value="Foo"></ui-prop>
     <ui-prop name="ID" type="number" value="0"></ui-prop>
     <ui-prop name="Info" foldable>
-      <div class="child">
+      <div slot="child">
         <ui-prop name="Foo" type="boolean"></ui-prop>
         <ui-prop name="Bar" type="boolean"></ui-prop>
       </div>
@@ -13,13 +13,13 @@
   </ui-section>
 
   <ui-section disabled>
-    <div class="header">Disabled</div>
+    <div slot="header">Disabled</div>
     <ui-prop name="Name" type="string" value="Foo"></ui-prop>
     <ui-prop name="ID" type="number" value="0"></ui-prop>
   </ui-section>
 
   <ui-section>
-    <div class="header">
+    <div slot="header">
       <ui-checkbox></ui-checkbox>
       Complex UI
       <span class="flex-1"></span>

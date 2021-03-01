@@ -124,19 +124,20 @@ Editor.Panel.extend({
     this.$.select.addEventListener('confirm', event => {
       let value = event.target.value;
 
-      this.profiles.local.data.scrollTop = 0;
-      this.profiles.local.data.select = value;
+      this.profiles.local.set('scrollTop', 0);
+      this.profiles.local.set('select', value);
       this.profiles.local.save();
 
       this.showPreview(value);
     });
 
-    this.$.select.value = this.profiles.local.data.select;
-    this.showPreview(this.profiles.local.data.select);
+    const value = this.profiles.local.get('select');
+    this.$.select.value = value;
+    this.showPreview(value);
   },
 
   close () {
-    this.profiles.local.data.scrollTop = this.$.view.scrollTop;
+    this.profiles.local.set('scrollTop', this.$.view.scrollTop);
     this.profiles.local.save();
   },
 
@@ -146,7 +147,7 @@ Editor.Panel.extend({
       .then(initFn => {
         initFn(this);
         setTimeout(() => {
-          this.$.view.scrollTop = this.profiles.local.data.scrollTop;
+          this.$.view.scrollTop = this.profiles.local.get('scrollTop');
         }, 10);
       });
   },
